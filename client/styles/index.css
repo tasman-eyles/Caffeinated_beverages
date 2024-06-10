@@ -6,3 +6,21 @@ body {
   padding: 20px;
   font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
+
+.urlButton {
+  background-color: lightgray;
+  border: 2px;
+  border-color: black;
+  border-width: 2px;
+  margin: 10px;
+  font-size: 17px;
+  cursor: pointer; 
+}
+
+.delButton {
+  background-color: lightgray;
+  border-width: 2px;
+  padding: 2px 5px;
+  font-size: 10px;
+  cursor: pointer; 
+}

@@ -31,3 +31,11 @@ export async function addNewBeverage(newBeverage: BeverageData) {
     throw error
   }
 }
+
+export async function deleteBeverage(id: number) {
+  try {await request.delete(`${rootURL}/${id}`)
+  } catch (error) {
+  console.error(error) 
+  throw error
+  }
+}

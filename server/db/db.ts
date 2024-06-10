@@ -11,10 +11,10 @@ export function getBeveragesById(id: number): Promise<Beverage> {
   return db('beverages').where({ id }).select().first()
 }
 
-export function deleteBeverage(id: number) {
-  return db('beverages').where({ id }).del()
-}
-
 export function createBeverage(beverage: BeverageData) {
 return db('beverages').insert(beverage)
+}
+
+export function deleteBeverage(id: number) {
+  return db('beverages').where({ id }).del()
 }

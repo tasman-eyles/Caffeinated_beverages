@@ -1,11 +1,18 @@
 import { Beverage } from "../../models/beverages"
 
-export default function Beverages({name, url}: Beverage ) {
+import { deleteBeverage } from "../apis/apiClient"
+
+export async function handleDelete(id: number) {
+  await deleteBeverage(id)
+}
+
+export default function Beverages({name, url, id }: Beverage ) {
   return (
     <div>
-      <a href={ url }>
+      <a className="urlButton" href={ url }>
       {name} 
       </a>
+      <button className="delButton" onClick={() => handleDelete(id)}>❌</button>
     </div>
   )
 }
