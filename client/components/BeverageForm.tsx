@@ -33,6 +33,7 @@ export default function BeverageForm() {
   return (
     <>
     <h2>Add a Drink!</h2>
+
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Drink Name</label>
         <input className='input' onChange={handleChange} value={newBeverage} id="name"></input>
@@ -40,6 +41,7 @@ export default function BeverageForm() {
         <input className='input' onChange={handleUrlChange} value={newUrl} id="url"></input>
         <button className='input'>Submit Beverage</button>
       </form>
+
     </>
   )
 }

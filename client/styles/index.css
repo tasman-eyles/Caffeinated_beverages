@@ -20,7 +20,7 @@ body {
 .delButton {
   background-color: lightgray;
   border-width: 2px;
-  padding: 2px 5px;
+  padding: 1px 3px;
   font-size: 10px;
   cursor: pointer; 
 }
