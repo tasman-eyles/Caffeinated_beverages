@@ -1,5 +1,5 @@
 import BeverageList from "./BeverageList"
-
+import BeverageForm from './BeverageForm'
 
 function App() {
   return (
@@ -7,10 +7,13 @@ function App() {
       <header className="header">
         <h1>My Collection of my Favourite Caffinated Beverages </h1>
       </header>
-      <section className="main">{/* add your code here */}</section>
+      <section className="main">
       <BeverageList />
+      <BeverageForm />
+      </section>
     </>
   )
 }
 
 export default App
+ 
