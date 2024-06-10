@@ -24,3 +24,7 @@ body {
   font-size: 10px;
   cursor: pointer; 
 }
+
+.input {
+  cursor: pointer; 
+}
