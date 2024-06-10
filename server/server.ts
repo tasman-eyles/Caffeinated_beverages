@@ -2,13 +2,13 @@ import * as Path from 'node:path'
 
 import express from 'express'
 
-import videos from './routes/videos.ts'
+import beverages from './routes/beverage.ts'
 const server = express()
 server.use(express.json())
 
 // ADD YOUR API ROUTES HERE
 
-server.use('/api/v1/videos', videos)
+server.use('/api/v1/beverages', beverages)
 
 if (process.env.NODE_ENV === 'production') {
   server.use(express.static(Path.resolve('public')))

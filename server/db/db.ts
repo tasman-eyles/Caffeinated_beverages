@@ -1,20 +1,20 @@
 import connection from './connection'
-import { Video, VideoData } from '../../models/videos'
+import { Beverage, BeverageData } from '../../models/beverages.ts'
 
 const db = connection
 
-export function getVideos(): Promise <Video[]> {
-  return db('videos').select()
+export function getBeverages(): Promise <Beverage[]> {
+  return db('beverages').select()
 }
 
-export function getVideosById(id: number): Promise<Video> {
-  return db('videos').where({ id }).select().first()
+export function getBeveragesById(id: number): Promise<Beverage> {
+  return db('beverages').where({ id }).select().first()
 }
 
-export function deleteVideo(id: number) {
-  return db('videos').where({ id }).del()
+export function deleteBeverage(id: number) {
+  return db('beverages').where({ id }).del()
 }
 
-export function createVideo(video: VideoData) {
-return db('videos').insert(video)
+export function createBeverage(beverage: BeverageData) {
+return db('beverages').insert(beverage)
 }
