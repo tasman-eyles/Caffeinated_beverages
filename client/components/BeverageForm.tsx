@@ -10,7 +10,9 @@ export default function BeverageForm() {
   const queryClient = useQueryClient()
   const addMutation = useMutation({
     mutationFn: (beverage: BeverageData) => addNewBeverage(beverage),
-    onSuccess: () => queryClient.invalidateQueries({ queryKey: ['beverages'] }),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['beverages'] })
+    },
   })
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -24,11 +26,19 @@ export default function BeverageForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
 
-    addMutation.mutate({
-      name: newBeverage,
-      url: newUrl,
-    })
-  }
+if (!newBeverage || !newUrl) {
+  console.log("Please fill in both feilds before submitting")
+  alert("Please fill in both feilds before submitting")
+  return
+}
+
+addMutation.mutate({
+  name: newBeverage,
+  url: newUrl,
+  })
+  console.log(`Added ${newBeverage} successfully! (refresh page)`)
+  alert(`Added ${newBeverage} successfully! (refresh page)`)
+}
 
   return (
     <>
@@ -41,7 +51,6 @@ export default function BeverageForm() {
         <input className='input' onChange={handleUrlChange} value={newUrl} id="url"></input>
         <button className='input black-text'><strong>Submit Beverage</strong></button>
       </form>
-
     </>
   )
 }
