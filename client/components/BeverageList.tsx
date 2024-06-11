@@ -1,4 +1,3 @@
-
 import  Beverages  from './beverage.tsx'
 import { useQuery } from '@tanstack/react-query'
 import { fetchBeverages } from '../apis/apiClient'

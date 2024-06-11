@@ -1,5 +1,4 @@
 import { Beverage } from "../../models/beverages"
-
 import { deleteBeverage } from "../apis/apiClient"
 
 export async function handleDelete(id: number, name: string) {
