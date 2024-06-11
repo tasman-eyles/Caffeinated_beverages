@@ -3,7 +3,6 @@ import BeverageForm from './BeverageForm'
 
 function App() {
   return (
-
     <>
   <div className="center-container">
       <header className="white-text">
@@ -18,7 +17,6 @@ function App() {
       </section>
   </div>
     </>
-
   )
 }
 

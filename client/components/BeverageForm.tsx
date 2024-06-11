@@ -30,7 +30,7 @@ if (!newBeverage || !newUrl) {
   console.log("Please fill in both feilds before submitting")
   alert("Please fill in both feilds before submitting")
   return
-}
+  }
 
 addMutation.mutate({
   name: newBeverage,
