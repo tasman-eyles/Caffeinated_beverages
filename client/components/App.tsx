@@ -3,15 +3,22 @@ import BeverageForm from './BeverageForm'
 
 function App() {
   return (
+
     <>
-      <header className="header">
+  <div className="center-container">
+      <header className="white-text">
         <h1>Tasman's Collection of my Favourite Caffinated Beverages </h1>
       </header>
-      <section className="main">
-      <BeverageList />
+      <section>
+        <div className="box">
+          <BeverageList />
+        </div>
+
       <BeverageForm />
       </section>
+  </div>
     </>
+
   )
 }
 
