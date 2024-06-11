@@ -36,8 +36,8 @@ addMutation.mutate({
   name: newBeverage,
   url: newUrl,
   })
-  console.log(`Added ${newBeverage} successfully! (refresh page)`)
-  alert(`Added ${newBeverage} successfully! (refresh page)`)
+  console.log(`Added ${newBeverage} successfully!`)
+  alert(`Added ${newBeverage} successfully!`)
 }
 
   return (
