@@ -28,6 +28,7 @@ router.post('/', async (req, res) => {
   try {
     const data: BeverageData = req.body
     await db.createBeverage(data)
+    res.sendStatus(200)
   } catch (error) {
     console.error(`Database error ${error}`)
     res.sendStatus(500)
