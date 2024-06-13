@@ -14,7 +14,7 @@ export default function Beverages({ name, url, id }: Beverage ) {
   async function handleDelete(id: number, name: string) {
     deleteMutation.mutate( id )
     console.log(`${name} deleted successfully!`)
-    // alert(`${name} deleted successfully!`)
+    alert(`${name} deleted successfully!`)
   }
   return (
       <ul>
