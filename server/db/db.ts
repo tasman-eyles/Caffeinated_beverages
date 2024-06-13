@@ -15,6 +15,6 @@ export function createBeverage(beverage: BeverageData) {
 return db('beverages').insert(beverage)
 }
 
-export function deleteBeverage(id: number) {
+export function deleteBeverage(id: number): Promise<BeverageData> {
   return db('beverages').where({ id }).del()
 }
