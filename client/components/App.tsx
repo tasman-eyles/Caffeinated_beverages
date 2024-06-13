@@ -12,7 +12,6 @@ function App() {
         <div className="box">
           <BeverageList />
         </div>
-
       <BeverageForm />
       </section>
   </div>

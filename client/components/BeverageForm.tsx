@@ -3,7 +3,6 @@ import { useState } from 'react'
 import { BeverageData } from '../../models/beverages'
 import { addNewBeverage } from '../apis/apiClient'
 
-
 export default function BeverageForm() {
   const [newBeverage, setNewBeverage] = useState('')
   const [newUrl, setNewUrl] = useState('')
@@ -23,7 +22,6 @@ export default function BeverageForm() {
   const handleUrlChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setNewUrl(e.target.value)
   }
-
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
