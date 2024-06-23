@@ -6,7 +6,7 @@ function App() {
     <>
   <div className="center-container">
       <header className="white-text">
-        <h1>Tasman's Collection of His Favourite Caffinated Beverages </h1>
+        <h1>Tasman's Collection of His Favourite Caffinated Beverages</h1>
       </header>
       <section>
         <div className="box">
